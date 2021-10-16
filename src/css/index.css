@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --wireframe: 2px solid darkblue;
+    --component: 2px solid limegreen;
+    --debugging: 2px solid darkred;
+}
+section {
+
+    display: flex;
+    height: 100vh;
+    overflow: scroll;
+
+    padding: 1rem;
+    /* dev border */
+    border: var(--wireframe);
+}
+
+/* ul [ list ] : data lists */
+ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 80%;
+
+    list-style-type: none;
+    /* dev border */
+    border: var(--component);
+}
+@media (min-width:760px) {
+    ul {
+        min-width: 20%;
+    }
+}
+
+/* li [ items ] : created via javascript */
+li {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* dev border */
+    border: var(--debugging);
+}
+
+/* Data Content [ Large ] */
+#bosses li,
+#souls li,
+#item1 li,
+#item2 li,
+#type1 li,
+#type2 li {
+    padding-left: 10px;
+}
+
+/* Weapon Icons [ Small ] */
+#type1, #type2 {min-width: 20%;}
+@media (min-width: 760px) {
+    #type1, #type2 {
+        min-width: 5%;
+    }
+}
+
+/* Checkbox Containers [ Small ] */
+#completed, #selected1, #selected2 {min-width: 20%;}
+@media (min-width: 760px) {
+    #completed, #selected1, #selected2 {
+        min-width: 5%;
+    }
+}
+
+
+
